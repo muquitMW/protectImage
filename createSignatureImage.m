@@ -1,9 +1,9 @@
 function In = createSignatureImage(I,signText, fontsize)
-%% 初期処理
-bI      = zeros(size(I));%空の背景（黒）画像を作成
-position= [10 size(I,1)/2-10 size(I,2)*0.8 size(I,1)*0.3];%署名の位置を指定
+%% Initial operation
+bI      = zeros(size(I));%blank background image
+position= [10 size(I,1)/2-10 size(I,2)*0.8 size(I,1)*0.3];%adding 1 to positions of the letters
 
-%% 署名を挿入
+%% Adding signature
 In      = insertObjectAnnotation(bI,...
     'rectangle',...
     position,...
@@ -12,9 +12,9 @@ In      = insertObjectAnnotation(bI,...
     'TextColor',[1 1 1],...
     'FontSize',fontsize);
 
-In      = rgb2gray(In);%グレー画像
-In      = In >=1;%ピクセル値が「1」未満のピクセルの値を０に戻す
-In      = cast(In,'like',I);%署名画像の型を元画像と合わせる
+In      = rgb2gray(In);%Gray image
+In      = In >=1;%
+In      = cast(In,'like',I);%Adjust to input image's type
 
 %% Inputs
 % signText = 'Mohammad Muquit';

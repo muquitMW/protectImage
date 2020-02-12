@@ -1,4 +1,12 @@
 function In = createSignatureImage(I,signText, fontsize)
+%This function creates an image containing the signature text as white letters on a black background
+%Inputs
+% I : original image
+% signText: Texts of the signature to be added
+% fonsize: Size of letters for the signature
+%Outputs
+%In : Image with signature
+
 %% Initial operation
 bI      = zeros(size(I));%blank background image
 position= [10 size(I,1)/2-10 size(I,2)*0.8 size(I,1)*0.3];%adding 1 to positions of the letters

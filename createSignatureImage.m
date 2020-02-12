@@ -1,11 +1,11 @@
 function In = createSignatureImage(I,signText, fontsize)
-%This function creates an image containing the signature text as white letters on a black background
+%This function creates an image containing the signature text (signature image) as white letters on a black background
 %Inputs
 % I : original image
 % signText: Texts of the signature to be added
 % fonsize: Size of letters for the signature
 %Outputs
-%In : Image with signature
+%In : signature image
 
 %% Initial operation
 bI      = zeros(size(I));%blank background image
